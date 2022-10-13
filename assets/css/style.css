@@ -246,18 +246,6 @@ li.menu{
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .header-titular{
     margin: 1rem;
     padding: 1rem;
@@ -277,6 +265,42 @@ li.menu{
   background-color: var(--body-color);
   color: var(--text-color);
 }
+
+.tittle-price{
+  color: var(--first-color);
+  font-size: 18px;
+  font-family: var(--body-font);
+  padding: .5rem 2rem;
+
+}
+
+.header-textos-btn{
+  display: flex;
+  font-size: 18px;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  align-items: center;
+}
+
+.btn-discover{
+  width: 100px;
+  height: 50px;
+  background-color: var(--card-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  box-shadow: 2px 2px var(--card-color);
+}
+
+.btn-add{
+  width: 150px;
+  height: 60px;
+  background-color: var(--text-color);
+  color: var();
+  font-family: var(--body-font);
+  box-shadow: 2px 2px var(--card-color);
+
+}
+
 
 
 @media screen and ( min-width: 850px ){
