@@ -352,6 +352,7 @@ li.menu{
   box-sizing: border-box;
   padding-top: 5rem;
   gap: 2rem;
+  padding-bottom: 5rem;
 }
 
 .productoimg{
@@ -379,5 +380,52 @@ li.menu{
 }
 
 
+@media screen and ( min-width: 850px ){
 
+  .main-seccion2 {
+    display: flex;
+    flex-direction: row;
+}
 
+}
+
+/*FOOTER-----------------------------------------------*/
+
+.footer{
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color:var(--container-color);
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+
+.footer-info{
+  padding-left: 2rem;
+  font-family: var(--body-font);
+  color: var(--text-color);
+
+}
+
+.footer-info>h2{
+
+}
+
+.footer-info>p{
+
+}
+
+.footer-info>div.footer-info{
+
+}
+
+@media screen and ( min-width: 850px ){
+
+  .footer{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+}
