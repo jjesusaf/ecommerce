@@ -72,35 +72,10 @@ body.dark{
     align-items: flex-start;
 }
 
-.nav-bar.dark{
-  --first-color: hsl(182, 53%, 74%);
-  --button-color: hsl(246, 16%, 12%);
-  --button-color-alt: hsl(0, 0%, 28%);
-  --card-color: hsla(246, 16%, 5%, .5);
-  --title-color: hsl(0, 0%, 95%);
-  --text-color: hsl(0, 0%, 75%);
-  --body-color: hsl(249, 19%, 14%);
-  --container-color: hsl(246, 16%, 12%);
-  --border-color: hsl(0, 0%, 20%);
-}
-
 .nav-logoystore{
     display: flex;
     align-items: center;
     padding: 1rem;
-}
-
-.nav-logoystore.dark{
-  --first-color: hsl(182, 53%, 74%);
-  --button-color: hsl(246, 16%, 12%);
-  --button-color-alt: hsl(0, 0%, 28%);
-  --card-color: hsla(246, 16%, 5%, .5);
-  --title-color: hsl(0, 0%, 95%);
-  --text-color: hsl(0, 0%, 75%);
-  --body-color: hsl(249, 19%, 14%);
-  --container-color: hsl(246, 16%, 12%);
-  --border-color: hsl(0, 0%, 20%);
-
 }
 
 .nav-btnstore{
@@ -173,7 +148,7 @@ li.menu{
 }
 
 .secc2-menuimg{
-  padding-top: 7rem;
+  padding-top: 4rem;
   padding-bottom: 2rem;
 }
 #luna, #store, #menu, #cerrar{
@@ -280,6 +255,7 @@ li.menu{
   padding-left: 2rem;
   padding-top: 1rem;
   align-items: center;
+  font-weight: bold;
 }
 
 .btn-discover{
@@ -307,7 +283,7 @@ li.menu{
 
   .header-textos{
     position: absolute;
-    bottom: 29rem;
+    bottom: 20rem;
     width: 40%;
   }
 
@@ -334,3 +310,74 @@ li.menu{
     display: flex;
   }
 }
+
+/*MAIN SECCION 1 ---------------------------------------*/
+
+.main-seccion1{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 18px;
+  font-family: var(--body-font);
+  color: var(--text-color);
+  gap: 1.5rem;
+  background-color: var(--body-color);
+  margin-top: 3rem;
+}
+
+.seccion1-filter{
+  border-right: 5px solid var(--border-color);
+}
+
+@media screen and ( min-width: 850px ){
+
+  .main-seccion1{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/*MAIN SECCION 2*/
+
+.main-seccion2{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  box-sizing: border-box;
+  padding-top: 5rem;
+  gap: 2rem;
+}
+
+.productoimg{
+  width: 100%;
+}
+
+.precios-stock{
+  display: flex;
+  justify-content: space-around;
+  font-size: 18px;
+  font-family: var(--body-font);
+  color: var(--text-color);
+  background-color: var(--body-color);
+}
+
+.seccion2-producto{
+  background-color: var(--container-color);
+  width: 50%;
+}
+
+.producto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
