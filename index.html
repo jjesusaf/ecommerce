@@ -9,6 +9,18 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+  <div class="loader" id="loader">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="loader--img">
+      <title>Academlo Logo</title>
+      <g>
+        <g>
+          <path
+            d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+          </path>
+        </g>
+      </g>
+  </svg>
+  </div>
   <header class="header">
     <nav class="nav-bar">
       <div class="nav-logoystore">
@@ -29,7 +41,12 @@
       <div class="nav-secc2">
         <div class="nav-btnstore">
         <i class='bx bx-moon bx-sm' id="luna"></i>
-        <i class='bx bx-shopping-bag bx-sm' id="store" ></i>
+        <div class="cart-shop">
+          <i class='bx bx-shopping-bag bx-sm' id="store" ></i>
+          <span id="cart-counter" class="counter">
+            0
+          </span>
+        </div>
         <i class='bx bx-menu bx-sm' id="menu"></i>
         <i class='bx bxs-x-circle bx-sm' id="cerrar"></i>
         </div>
@@ -41,23 +58,23 @@
       <li class="menu">Home</li>
       <li class="menu">Products</li>
       </ul>
-      <div class="nav-cart">
+      <div class="nav-cart" id="nav-cart">
         <i class='bx bx-x' id="cerrar2"></i>
-        <h1 class="car-tittle">
-          My cart
-        </h1>
-        <img src="./assets/images/empty-cart.png" alt="empty" id="empty-car">
         <div class="car-total">
-          <p class="car-items">
-            0 items
-          </p>
-          <p class="car-total">
-            $0.00
-          </p>
+          <h1 class="car-tittle">
+            My cart
+          </h1>
+          <img src="./assets/images/empty-cart.png" alt="" id="empty-cart"> 
         </div>
         <button class="car-checkout">
           Checkout
         </button>
+        <p class="car-items">
+          0 items
+        </p>
+        <p class="car-totall">
+          $0.00
+        </p>
       </div>
     </nav>
     <div class="header-textos">
@@ -116,51 +133,6 @@
       </div>
     </section>
     <section class="main-seccion2">
-      <div class="producto">
-        <div class="seccion2-producto">
-          <img src="./assets/images/featured1.png" alt="" class="productoimg">
-          <div class="precios-stock">
-            <p>
-              $14.00
-              <br>
-              Hoodies
-            </p>
-            <p>
-              Stock: 1
-            </p>
-          </div>
-        </div> 
-      </div>
-      <div class="producto">
-        <div class="seccion2-producto">
-          <img src="./assets/images/featured2.png" alt="" class="productoimg">
-          <div class="precios-stock">
-            <p>
-              $24.00
-              <br>
-              Shirts
-            </p>
-            <p>
-              Stock: 10
-            </p>
-          </div>
-        </div>
-        </div>       
-      <div class="producto">
-        <div class="seccion2-producto">
-          <img src="./assets/images/featured3.png" alt="" class="productoimg">
-          <div class="precios-stock">
-            <p>
-              $24.00
-              <br>
-              Sweatshirts
-            </p>
-            <p>
-              Stock: 18
-            </p>
-          </div>
-        </div>
-      </div>
     </section>
   </main>
   <footer class="footer">
@@ -217,6 +189,10 @@
     <script src="./assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+
 
 <!--========== Logo Academlo con contorno ==========-->
     <!-- 

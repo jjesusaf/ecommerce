@@ -1,6 +1,8 @@
 
 document.addEventListener("DOMContentLoaded", () =>{
   console.log("DOM Cargado")
+  showProduct()
+  
 })  
 
 
@@ -30,6 +32,23 @@ const items = [
       quantity: 20
     }
   ]
+
+  
+
+  const loadComponent = () => {
+    const loader = document.getElementById("loader")
+    setTimeout(() => {
+      loader.classList.add("hidden")
+    }, 3000);
+  };
+   
+document.addEventListener("DOMContentLoaded", loadComponent()  )
+
+
+
+
+
+
 
 //BARRA DE NAVEGACION
 
@@ -86,10 +105,191 @@ store.addEventListener("click", e => {
 
 cerrar2.addEventListener("click", e => {
   navCart[0].classList.remove("visiblec")
+  
 })
 
 
 
 
+/*
+const showProduct = () => {
+
+  const producto = document.getElementsByClassName("car-total")
+
+  let fragment = `
+  <h1 class="car-tittle">
+    My cart
+  </h1>
+  `
+  items.forEach( producto =>{
+
+    fragment += `
+  <div class="seccion2-productos" id="${producto.id}">
+    <img src=${producto.img} alt="" class="productoimg2"> 
+      <h3>
+        ${producto.name}
+      </h3>
+      <p class="cartstock">
+        Stok:${producto.quantity} | ${producto.price}
+      </p>
+      <p class="subtotal">
+        Subtotal: ${producto.cantidad * producto.price} 
+      </p>
+      <button class="add1">
+        +
+      </button>
+      <p class="conteo">
+        ${producto.cantidad}
+      </p>
+      <button class="rest1">
+        -
+      </button>
+  </div> `
+    
+   
+    })
+
+    
+    producto[0].innerHTML = fragment 
+      
+    cartFunction()
+
+   
+}
+
  
+function cartFunction(){
+  const btnAdd = document.querySelectorAll(".add1")
+  const cart = []
+
+  btnAdd.forEach( button => {
+    button.addEventListener( "click", e => {
+      const id = parseInt(e.target.parentElement.id)
+      const selectProduct = items.find( item => item.id === id)
+      let index = cart.indexOf(selectProduct)
+
+      if (index !== -1 ){
+        cart[index].cantidad++
+      }else{
+        selectProduct.cantidad = 1
+        cart.push(selectProduct)
+      }
+      console.log(cart)
+      
+    })
+  })
+
   
+}
+*/
+
+const showProduct = () => {
+
+  const productos = document.getElementsByClassName("main-seccion2")
+
+  let fragment = `
+  `
+  items.forEach( produ =>{
+
+    fragment += `
+    <div class="producto">
+      <div class="seccion2-producto" id="${produ.id}">
+        <img src= ${produ.image} alt="" class="productoimg">
+        <button class="cartadd">
+          +
+        </button> 
+        <div class="precios-stock">
+          <p>
+            $${produ.price}.00
+          <br>
+            ${produ.name}
+          </p>
+          <p>
+            Stock: ${produ.quantity}
+          </p>
+        </div>
+      </div>
+    </div>       
+    `
+    
+   
+    })
+
+    
+    productos[0].innerHTML = fragment 
+    cartFunction()
+  
+   
+}
+
+function cartFunction(){
+  const btnAdd = document.querySelectorAll(".cartadd")
+  console.log(btnAdd)
+  const cart = []
+
+  btnAdd.forEach( button => {
+    button.addEventListener( "click", e => {
+      const id = parseInt(e.target.parentElement.id)
+      const selectProduct = items.find( item => item.id === id)
+      let index = cart.indexOf(selectProduct)
+
+      if (index !== -1 ){
+        if(cart[index].quantity === cart[index].cantidad){
+          alert("no")
+        }else{
+          cart[index].cantidad++
+        }
+      }else{
+        selectProduct.cantidad = 1
+        cart.push(selectProduct)
+      }
+      
+      console.log(cart)
+      showProductsInCart(cart)
+      
+    })
+  })
+
+  
+}
+
+function showProductsInCart (cart){
+  const carrito = document.getElementsByClassName("car-total")
+
+  let fragment = `
+  <h1 class="car-tittle">
+    My cart
+  </h1>
+  `
+  cart.forEach( producto =>{
+    fragment += `
+  <div class="seccion2-productos" id="${producto.id}">
+    <img src=${producto.image} alt="" class="productoimg2"> 
+      <h3>
+        ${producto.name}
+      </h3>
+      <p class="cartstock">
+        Stok:${producto.quantity} | $${producto.price}.00
+      </p>
+      <p class="subtotal">
+        Subtotal: $${producto.cantidad * producto.price}.00
+      </p>
+      <button class="add1">
+        +
+      </button>
+      <p class="conteo">
+        ${producto.cantidad}
+      </p>
+      <button class="rest1">
+        -
+      </button>
+  </div> `
+    
+   
+    })
+
+    
+    carrito[0].innerHTML = fragment 
+
+}
+
