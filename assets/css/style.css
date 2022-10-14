@@ -256,7 +256,7 @@ li.menu{
   justify-content: space-evenly;
   margin: 0;
   padding: 0;
-  height: 130vh;
+  height: 110vh;
   position: absolute;
   background-color: var(--body-color);
 }
@@ -398,7 +398,7 @@ li.menu{
 
 
 .car-checkout{
-  margin-top: 5rem;
+  margin-top: 1rem;
   margin-right: 4rem;
   width: 100px;
   height: 70px;
