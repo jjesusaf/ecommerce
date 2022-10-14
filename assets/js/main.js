@@ -255,7 +255,7 @@ function cartFunction(){
 
 function showProductsInCart (cart){
   const carrito = document.getElementsByClassName("car-total")
-
+  const cont3 = document.getElementsByClassName("pelo")
   let fragment = `
   <h1 class="car-tittle">
     My cart
@@ -283,13 +283,23 @@ function showProductsInCart (cart){
       <button class="rest1">
         -
       </button>
-  </div> `
-    
-   
+  </div> `   
     })
 
+    let fragment2 = `
+    <p class="car-items">
+      ${cart[0].cantidad + cart[1].cantidad + cart[2].cantidad} items
+    </p>
+    <p class="car-totall">
+      $${cart[0].cantidad * cart[0].price + cart[1].cantidad * cart[1].price + cart[2].cantidad * cart[2].price}.00
+    </p>
+    `
+    console.log(cart)
     
     carrito[0].innerHTML = fragment 
+    cont3[0].innerHTML = fragment2
+    
 
 }
+
 
