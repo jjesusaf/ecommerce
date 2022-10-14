@@ -308,5 +308,6 @@ function showTotales (cart){
     $${cart[0].cantidad * cart[0].price + cart[1].cantidad * cart[1].price + cart[2].cantidad * cart[2].price}.00
   </p>
   `
+
   cont3[0].innerHTML = fragment2
 }
